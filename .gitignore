@@ -16,4 +16,4 @@ blog/migrations
 
 # Static files
 files/
-static/
+staticfiles/
