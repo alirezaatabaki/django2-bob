@@ -2,6 +2,18 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Article)
-admin.site.register(UserProfile)
-admin.site.register(Category)
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ['user', 'avatar', 'description']
+
+
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    search_fields = ['title', 'content']
+    list_display = ['title', 'category', 'created_at']
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['title', 'cover']
