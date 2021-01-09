@@ -10,3 +10,10 @@ db.sqlite3
 
 # Migrations
 blog/migrations
+
+# Credentials
+.env
+
+# Static files
+files/
+static/
